@@ -130,7 +130,11 @@ h2 {
 
 .sec-note {
   font-family: var(--mono); font-size: .78rem; color: var(--faint);
-  margin-bottom: 2rem; max-width: var(--measure);
+  margin-bottom: 1.25rem; max-width: var(--measure);
+}
+.sec-org {
+  font-family: var(--mono); font-size: .72rem; color: var(--faint);
+  margin-bottom: 2rem;
 }
 
 /* ---- work catalog ---- */
