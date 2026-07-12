@@ -22,9 +22,9 @@
   <header class="site-head">
     <span class="head-id">OCENO, D. — INDEX</span>
     <nav aria-label="Sections">
-      <a href="#work"><svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg><span class="nav-label">Work</span></a>
+      <a href="#stelnyx"><svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg><span class="nav-label">Work</span></a>
       <a href="#about"><svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span class="nav-label">About</span></a>
-      <a href="#contact"><svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span class="nav-label">Contact</span></a>
+      <a href="#contact"><svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span class="nav-label">Hire me</span></a>
     </nav>
   </header>
 
@@ -32,14 +32,19 @@
     <section class="hero" aria-label="Introduction">
       <p class="hero-kicker">REF 001 / PERSONNEL</p>
       <h1>Daniel<br>Oceno</h1>
-      <p class="hero-title">Senior Full-Stack Developer · IT Support · Software Architect · Technical&nbsp;PM</p>
-      <p class="hero-lede">20+ years shipping software with distributed teams. Now building
-        production products end-to-end — directing AI coding agents against tight specs,
-        owning architecture and the last mile.</p>
+      <p class="hero-title">Senior Full-Stack Developer · Software Architect · Technical&nbsp;Lead</p>
+      <p class="hero-lede">I turn ambitious product ideas into dependable production software.
+        Twenty-plus years across engineering and delivery — from architecture and implementation
+        to the last mile that gets a product shipped.</p>
+      <div class="hero-actions">
+        <a class="primary" href="#contact">Start a conversation</a>
+        <a href="#work">See selected work</a>
+      </div>
       <dl class="spec">
         <div><dt>Location</dt><dd>Remote · Americas timezones (UTC−4)</dd></div>
         <div><dt>Languages</dt><dd>English · Spanish · Portuguese</dd></div>
         <div><dt>Stack</dt><dd>TypeScript · Next.js · PostgreSQL · Cloudflare Workers / Pages · Vercel</dd></div>
+        <div><dt>Availability</dt><dd class="availability">Open to senior engineering, technical lead and product delivery roles</dd></div>
         <div><dt>Links</dt><dd>
           <a href="https://github.com/danieloceno" rel="noopener">GitHub</a><span aria-hidden="true"> · </span>
           <a href="https://linkedin.com/in/pablo-oceno-3540a8160" rel="noopener">LinkedIn</a><span aria-hidden="true"> · </span>
@@ -50,23 +55,18 @@
 
     <section id="work" aria-labelledby="work-h">
       <h2 id="work-h"><span class="sec-no">01</span>Selected work</h2>
-      <p class="sec-note">Dev tools first — they carry the most signal. Versions and licenses as listed.</p>
+      <p class="sec-note">Two modes of building. One standard: useful software, finished properly.</p>
+
+      <div class="work-group" id="stelnyx">
+        <div class="work-group-head">
+          <span class="work-group-code">GROUP 01</span>
+          <div>
+            <h3><a href="https://stelnyx.com" rel="noopener">Stelnyx</a> — Developer Infrastructure</h3>
+            <p>Developer tooling for understanding, securing and improving software systems. Deterministic, local-first, CI-friendly.</p>
+          </div>
+        </div>
 
       <ol class="catalog">
-        <li>
-          <article>
-            <span class="cat-idx" aria-hidden="true">S1</span>
-            <div class="cat-main">
-              <h3><a href="https://stelnyx.com" rel="noopener">Stelnyx</a></h3>
-              <p>Developer infrastructure — home of ApiGate, SecGate,
-                 LuxScope, LuxFaber, LuxAbility.</p>
-            </div>
-            <div class="cat-meta">
-              <span>brand · OSS</span>
-              <span>stelnyx.com</span>
-            </div>
-          </article>
-        </li>
         <li>
           <article>
             <span class="cat-idx" aria-hidden="true">A1</span>
@@ -105,7 +105,7 @@
             </div>
             <div class="cat-meta">
               <span>dev tool · scanner</span>
-              <span class="tag tag-private">private · under acquisition review</span>
+              <span class="tag tag-private">private · early access</span>
             </div>
           </article>
         </li>
@@ -139,6 +139,44 @@
             </div>
           </article>
         </li>
+      </ol>
+
+      <figure class="specimen">
+        <figcaption>Fig. 01 — <code>apigate</code> v0.3.3, static scan of a sample Express target. Unedited output.</figcaption>
+        <pre aria-label="ApiGate terminal output sample"><code>$ npx @stelnyx/apigate .
+
+░▒▓█ APIGATE v0.3.3 █▓▒░
+Target: sample-express-api
+Mode:   STATIC
+────────────────────────────────
+Headline:  84 / 100   █████████████████░░░   GOOD  rubric v1
+
+  Inventory        100 / 100   ████████████████████
+  Auth Coverage     60 / 100   ████████████░░░░░░░░
+  Open Risk         76 / 100   ███████████████░░░░░
+  Spec Drift       n/a / 100
+  Determinism      100 / 100   ████████████████████
+────────────────────────────────
+STATUS:     FAIL
+REASONS:    open-write
+ENDPOINTS:  6  (3 guarded, 3 open, 0 unknown, 1 intentional-public)
+RISK:       2 high · 1 med · 3 low
+
+Note: static analysis cannot verify runtime authorization (BOLA / object-level access).
+      See the 'Limitations' section of the report.</code></pre>
+      </figure>
+      </div>
+
+      <div class="work-group" id="luxbase">
+        <div class="work-group-head">
+          <span class="work-group-code">GROUP 02</span>
+          <div>
+            <h3>Luxbase — Products</h3>
+            <p>Independent products across visual AI, memories, community and physical spaces — designed and shipped end-to-end.</p>
+          </div>
+        </div>
+
+      <ol class="catalog">
         <li>
           <article>
             <span class="cat-idx" aria-hidden="true">B1</span>
@@ -195,48 +233,26 @@
           </article>
         </li>
       </ol>
+      </div>
 
-      <figure class="specimen">
-        <figcaption>Fig. 01 — <code>apigate</code> v0.3.3, static scan of a sample Express target. Unedited output.</figcaption>
-        <pre aria-label="ApiGate terminal output sample"><code>$ npx @stelnyx/apigate .
-
-░▒▓█ APIGATE v0.3.3 █▓▒░
-Target: sample-express-api
-Mode:   STATIC
-────────────────────────────────
-Headline:  84 / 100   █████████████████░░░   GOOD  rubric v1
-
-  Inventory        100 / 100   ████████████████████
-  Auth Coverage     60 / 100   ████████████░░░░░░░░
-  Open Risk         76 / 100   ███████████████░░░░░
-  Spec Drift       n/a / 100
-  Determinism      100 / 100   ████████████████████
-────────────────────────────────
-STATUS:     FAIL
-REASONS:    open-write
-ENDPOINTS:  6  (3 guarded, 3 open, 0 unknown, 1 intentional-public)
-RISK:       2 high · 1 med · 3 low
-
-Note: static analysis cannot verify runtime authorization (BOLA / object-level access).
-      See the 'Limitations' section of the report.</code></pre>
-      </figure>
     </section>
 
     <section id="about" aria-labelledby="about-h">
       <h2 id="about-h"><span class="sec-no">02</span>About</h2>
       <div class="about-body">
-        <p>20+ years across software development, IT systems and QA — as developer, team leader
-           and project manager, mostly in fast-paced distributed teams serving international users.
-           As project manager and team lead I ran cross-functional distributed teams across
-           time zones and owned international releases end to end — scope, schedule, delivery.
-           Today I ship products end-to-end, directing AI coding agents against tight specs:
-           full-stack TypeScript, edge-native, Next.js, PostgreSQL. Trilingual. Work gets
-           finished — no half-done handoffs, no drama.</p>
+        <p>I have spent more than 20 years building software and leading delivery across distributed,
+           cross-functional teams. I can move between architecture, hands-on implementation and
+           technical leadership without losing sight of the product or the people using it.
+           Today I combine full-stack TypeScript, edge-native infrastructure and disciplined use of
+           AI coding agents to move faster while keeping engineering judgment, quality and ownership
+           firmly human. I work comfortably across English, Spanish and Portuguese, and I stay with
+           the work until it is shipped, understood and maintainable.</p>
       </div>
     </section>
 
     <section id="contact" aria-labelledby="contact-h">
       <h2 id="contact-h"><span class="sec-no">03</span>Contact</h2>
+      <p class="contact-intro">Have a difficult product to ship, a system to untangle or a team that needs senior technical ownership? Let's talk.</p>
       <ul class="contact-list">
         <li><span>Email</span><svg class="contact-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><a href="mailto:daniel.oceno@gmail.com">daniel.oceno@gmail.com</a></li>
         <li><span>GitHub</span><svg class="contact-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg><a href="https://github.com/danieloceno" rel="noopener">github.com/danieloceno</a></li>

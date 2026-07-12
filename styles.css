@@ -103,6 +103,25 @@ h1 {
   color: var(--ink);
 }
 
+.hero-actions {
+  display: flex; flex-wrap: wrap; gap: .75rem;
+  margin-top: 1.75rem;
+  font-family: var(--mono); font-size: .76rem;
+  text-transform: uppercase; letter-spacing: .08em;
+}
+.hero-actions a {
+  display: inline-block; padding: .65rem .9rem;
+  text-decoration: none; border: 1px solid var(--line);
+}
+.hero-actions .primary {
+  color: var(--bg); background: var(--accent); border-color: var(--accent);
+  font-weight: 700;
+}
+.hero-actions .primary:hover { color: var(--bg); filter: brightness(1.08); }
+
+.availability { color: var(--muted); }
+.availability::before { content: "●"; color: #79a86b; margin-right: .55rem; }
+
 .spec {
   margin-top: 3rem;
   border-top: 1px solid var(--line);
@@ -131,6 +150,28 @@ h2 {
 .sec-note {
   font-family: var(--mono); font-size: .78rem; color: var(--faint);
   margin-bottom: 1.25rem; max-width: var(--measure);
+}
+
+/* ---- grouped work layout ---- */
+
+.work-group { margin-top: 2.5rem; scroll-margin-top: 2rem; }
+.work-group:first-of-type { margin-top: 0; }
+.work-group-head {
+  display: grid; grid-template-columns: 3.5rem minmax(0, 1fr);
+  gap: 1.25rem; align-items: start; margin-bottom: 1rem;
+}
+.work-group-code {
+  font-family: var(--mono); font-size: .72rem; color: var(--accent);
+  letter-spacing: .12em; padding: .35rem 0 0 .9rem;
+}
+.work-group-head h3 {
+  font-family: var(--mono); font-size: clamp(1.25rem, 2.5vw, 1.7rem);
+  font-weight: 500; letter-spacing: -.02em;
+}
+.work-group-head h3 a { text-decoration-thickness: 1px; }
+.work-group-head p {
+  color: var(--muted); font-size: .9rem;
+  max-width: var(--measure); margin-top: .35rem;
 }
 
 
@@ -203,6 +244,10 @@ h2 {
 /* ---- contact ---- */
 
 .contact-list { list-style: none; border-top: 1px solid var(--line); font-family: var(--mono); font-size: .85rem; }
+.contact-intro {
+  max-width: 42rem; margin: -.15rem 0 1.5rem;
+  font-size: clamp(1.05rem, 2vw, 1.25rem); color: var(--ink);
+}
 .contact-list li {
   display: grid; grid-template-columns: 9.5rem 1fr; gap: 1rem;
   padding: .7rem 0; border-bottom: 1px solid var(--line);
@@ -224,8 +269,9 @@ h2 {
 
 /* desktop: hide mobile icons */
 .nav-icon, .contact-icon { display: none; }
+.site-head nav a[href="#contact"] { color: var(--accent); }
 
-@media (max-width: 720px) {
+@media (max-width: 767px) {
   /* header — icon strip */
   .site-head {
     flex-wrap: nowrap; justify-content: center; gap: 0;
@@ -253,6 +299,8 @@ h2 {
   h1 { font-size: clamp(2.2rem, 12vw, 3.5rem); }
   .hero-title { font-size: .78rem; margin-top: 1rem; }
   .hero-lede { font-size: .92rem; margin-top: 1rem; }
+  .hero-actions { display: grid; }
+  .hero-actions a { text-align: center; }
 
   /* spec table — stack */
   .spec > div {
@@ -265,6 +313,11 @@ h2 {
   /* sections — tighter */
   section { padding-bottom: clamp(2rem, 5vh, 3rem); }
   h2 { font-size: .78rem; padding-bottom: .6rem; margin-bottom: 1rem; }
+
+  /* grouped work */
+  .work-group { margin-top: 3rem; }
+  .work-group-head { grid-template-columns: 1fr; gap: .35rem; }
+  .work-group-code { padding-left: 0; }
 
   /* catalog — app cards */
   .catalog article {
